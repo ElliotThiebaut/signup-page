@@ -26,30 +26,30 @@
                     <h2 class="secondaryTitle uk-margin-remove-bottom">Welcome to</h2>
                     <h1 class="title uk-margin-remove-top">Space.io</h1>
 
-                    <form class="uk-form-stacked uk-margin-medium-top">
+                    <form class="uk-form-stacked uk-margin-medium-top" action="signup_post.php" method="POST">
                         <div class="uk-margin">
                             <label class="form-label" for="form-stacked-text">Name</label>
                             <div class="uk-form-controls">
-                                <input class="input uk-width-1-1" id="form-stacked-text" type="text" placeholder="">
+                                <input class="input uk-width-1-1" id="form-stacked-text" type="text" name="name">
                             </div>
                         </div>
                         <div class="uk-margin">
                             <label class="form-label" for="form-stacked-text">Email</label>
                             <div class="uk-form-controls">
-                                <input class="input uk-width-1-1" id="form-stacked-text" type="email" placeholder="">
+                                <input class="input uk-width-1-1" id="form-stacked-text" type="email" name="email">
                             </div>
                         </div>
 
                         <div class="uk-margin">
                             <label class="form-label" for="form-stacked-text">Password</label>
                             <div class="uk-form-controls">
-                                <input class="input uk-width-1-1" id="form-stacked-text" type="password" placeholder="">
+                                <input class="input uk-width-1-1" id="form-stacked-text" type="password" name="password">
                             </div>
                         </div>
                         <div class="uk-margin">
                             <label class="form-label" for="form-stacked-text">Confirm password</label>
                             <div class="uk-form-controls">
-                                <input class="input uk-width-1-1" id="form-stacked-text" type="password" placeholder="">
+                                <input class="input uk-width-1-1" id="form-stacked-text" type="password" name="confirm_password">
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                     </form>
                     <div class="uk-margin-medium-top uk-flex">
                         <p class="signup_text">Already have an account ?</p>
-                        <a class="signup_link" href="index.html">Sign in</a>
+                        <a class="signup_link" href="index.php">Sign in</a>
                     </div>
                 </div>
             </div>
