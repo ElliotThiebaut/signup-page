@@ -16,6 +16,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     $password = htmlspecialchars($_POST['password']);
 } else {
     header('Location: signup.php?e=missing_form');
+    exit;
 }
 
 // Check user
@@ -32,7 +33,7 @@ while ($donnees = $reponse->fetch()) {
 $reponse->closeCursor();
 
 if ($user_exists == true) {
-    header('Location: index.php?e=sucess');
+    header('Location: dashboard.php?e=sucess');
 } else {
     header('Location: index.php?e=invalid_creds');
 }

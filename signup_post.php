@@ -20,6 +20,7 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['password'])
 
 } else {
     header('Location: signup.php?e=missing_form');
+    exit;
 }
 
 
@@ -65,22 +66,24 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
             } else {
                 header('Location: signup.php?e=match_password');
+                exit;
             }
         } else {
             header('Location: signup.php?e=bad_password');
+            exit;
         }
     } else {
         header('Location: signup.php?e=name');
+        exit;
     }
 } else {
     header('Location: signup.php?e=email');
+    exit;
 }
 
 
 
 // Go to next page
 if ($user_created == true) {
-    header('Location: signup.php?e=sucess');
-} else {
-    header('Location: signup.php?e=ERROR');
+    header('Location: index.php?e=sucess');
 }

@@ -47,6 +47,8 @@
     border-bottom: 2px solid #b86fce;
 }
 .card{
+    position: relative;
+    z-index: 1;
     border-radius: 5%;
 }
 .btn-submit{
@@ -76,4 +78,8 @@
 .signup_link:hover{
     color: #b86fce;
     text-decoration: underline #b86fce;
+}
+.overlay{
+    position: absolute;
+    z-index: 5;
 }

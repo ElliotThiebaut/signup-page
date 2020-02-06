@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="assets/css/uikit.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -21,6 +20,26 @@
 
     <main>
         <div class="background">
+            <?php
+
+            if (isset($_GET['e'])) {
+                if ($_GET['e'] == 'missing_form') {
+                    echo '<div class="uk-animation-fade uk-alert-danger overlay uk-margin-small-top uk-position-top-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>Une erreur est survenu lors de l\'envoie du formulaire ! </p>
+    </div>';
+                }
+                if ($_GET['e'] == 'sucess') {
+                    echo '<div class="uk-animation-fade uk-alert-success overlay uk-margin-small-top uk-position-top-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>Votre inscription à réussi !</p>
+    </div>';
+                }
+            }
+
+            ?>
+
+
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-height-1-1">
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-3 card">
                     <h2 class="secondaryTitle uk-margin-remove-bottom">Welcome to</h2>
@@ -39,6 +58,15 @@
                             <div class="uk-form-controls">
                                 <input class="input uk-width-1-1" id="form-stacked-text" type="password" name="password">
                             </div>
+                            <?php
+                            if (isset($_GET['e'])) {
+                                if ($_GET['e'] == 'invalid_creds') {
+                                    echo '<div class="uk-animation-fade uk-alert-danger uk-margin-small-top" uk-alert>
+                    <p>L\'email ou le mot de passe est incorrect </p>
+                </div>';
+                                }
+                            }
+                            ?>
                         </div>
 
                         <div class="uk-margin-large-top">
