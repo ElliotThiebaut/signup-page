@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+    header('Location: dashboard.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +44,27 @@
         <p>Votre inscription à réussi !</p>
     </div>';
                 }
+
+                if ($_GET['e'] == 'no_login') {
+                    echo '<div class="uk-animation-fade uk-alert-danger overlay uk-margin-small-top uk-position-top-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>Il faut vous connecter pour accéder au dashboard !</p>
+    </div>';
+                }
+
+                if ($_GET['e'] == 'logout') {
+                    echo '<div class="uk-animation-fade uk-alert-success overlay uk-margin-small-top uk-position-top-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>Vous vous êtes déconnecté !</p>
+    </div>';
+                }
+
+                if ($_GET['e'] == 'account_deleted') {
+                    echo '<div class="uk-animation-fade uk-alert-success overlay uk-margin-small-top uk-position-top-center" uk-alert>
+        <a class="uk-alert-close" uk-close></a>
+        <p>Votre compte a bien été supprimé !</p>
+    </div>';
+                }
             }
 
             ?>
@@ -42,7 +72,7 @@
 
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-height-1-1">
                 <div class="uk-card uk-card-default uk-card-body uk-width-1-3 card">
-                    <h2 class="secondaryTitle uk-margin-remove-bottom">Welcome to</h2>
+                    <h2 class="secondaryTitle uk-margin-remove-bottom">Bienvenu chez</h2>
                     <h1 class="title uk-margin-remove-top">Space.io</h1>
 
                     <form class="uk-form-stacked uk-margin-medium-top" action="signin_post.php" method="POST">
@@ -54,7 +84,7 @@
                         </div>
 
                         <div class="uk-margin">
-                            <label class="form-label" for="form-stacked-text">Password</label>
+                            <label class="form-label" for="form-stacked-text">Mot de passe</label>
                             <div class="uk-form-controls">
                                 <input class="input uk-width-1-1" id="form-stacked-text" type="password" name="password">
                             </div>
@@ -70,12 +100,12 @@
                         </div>
 
                         <div class="uk-margin-large-top">
-                            <input type="submit" class="btn-submit uk-border-pill" value="Login">
+                            <input type="submit" class="btn-submit uk-border-pill" value="Connexion">
                         </div>
                     </form>
                     <div class="uk-margin-medium-top uk-flex">
-                        <p class="signup_text">Don't have an account ?</p>
-                        <a class="signup_link" href="signup.php">Sign up</a>
+                        <p class="signup_text">Pas encore de compte ?</p>
+                        <a class="signup_link" href="signup.php">Inscrivez vous</a>
                     </div>
                 </div>
             </div>

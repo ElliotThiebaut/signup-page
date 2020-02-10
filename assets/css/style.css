@@ -15,6 +15,12 @@
     font-weight: 700;
     font-size: 20px;
 }
+.deleteText{
+    font-family: 'Poppins', sans-serif;
+    color: #f36f52;
+    font-weight: 500;
+    font-size: 20px;
+}
 .title{
     font-family: 'Poppins', sans-serif;
     color: #120788;
@@ -51,6 +57,11 @@
     z-index: 1;
     border-radius: 5%;
 }
+.card-dashboard{
+    position: relative;
+    z-index: 1;
+    border-radius: 20px;
+}
 .btn-submit{
     color: white;
     background-color: #885199;
@@ -62,6 +73,53 @@
 }
 .btn-submit:hover{
     transform: scale(0.9);
+}
+.btn-logout{
+    color: white;
+    background-color: #000000;
+    border: none;
+    padding: 25px 0px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+    display: block;
+}
+.btn-logout:hover{
+    text-decoration: none;
+    color: white;
+    transform: scale(0.9);
+}
+.btn-delete{
+    color: white;
+    background-color: #e04024;
+    border: none;
+    padding: 10px 30px ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+    display: block;
+}
+.btn-delete:hover{
+    text-decoration: none;
+    color: #e04024;
+    background-color: white;
+    border: 1px solid #e04024;
+}
+.btn-anulation{
+    color: white;
+    background-color: #32cf66;
+    border: none;
+    padding: 10px 30px ;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    transition: 0.2s ease-in-out;
+    display: block;
+}
+.btn-anulation:hover{
+    text-decoration: none;
+    color: #32cf66;
+    background-color: white;
+    border: 1px solid #32cf66;
 }
 .signup_text{
     font-family: 'Poppins', sans-serif;
