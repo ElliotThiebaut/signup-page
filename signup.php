@@ -40,7 +40,7 @@
 
             ?>
             <div class="uk-container uk-container-large uk-flex uk-flex-middle uk-height-1-1">
-                <div class="uk-card uk-card-default uk-card-body uk-width-1-3 card">
+                <div class="uk-card uk-card-default uk-card-body uk-width-1-2 uk-width-1-3@l card">
                     <h2 class="secondaryTitle uk-margin-remove-bottom">Bienvenu chez</h2>
                     <h1 class="title uk-margin-remove-top">Space.io</h1>
 
